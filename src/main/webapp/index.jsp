@@ -24,6 +24,30 @@
                 <form method="POST" action="Servlet?command=Logout">
                     <input type="submit" id="logout" value="Logout"></input>
                 </form>
+
+                <h3>The persons you met during the party:</h3>
+
+                <table>
+                    <tr>
+                        <th>E-mail</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Arrival</th>
+                        <th>Departure</th>
+                    </tr>
+
+                    <c:forEach var="person" items="${aanwezigePersonen}">
+                        <tr>
+                            <td>${person.email}</td>
+                            <td>${person.firstName}</td>
+                            <td>${person.lastName}</td>
+                            <td>${person.arrival}</td>
+                            <td>${person.leave}</td>
+                        </tr>
+                    </c:forEach>
+
+                    <caption>Users Overview</caption>
+                </table>
             </c:when>
 
             <c:otherwise>

@@ -27,21 +27,28 @@
 
         <form method="POST" action="Servlet?command=Add" novalidate="novalidate">
             <!-- novalidate in order to be able to run tests correctly -->
-            <p><label for="userid">User id</label><input type="text" id="userid" name="userid" value="${userIdPrevious}"
-                                                         required></p>
+            <p><label for="userid">User id</label>
+                <input type="text" id="userid" name="userid" value="${userIdPrevious}" required></p>
 
-            <p><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName"
-                                                               value="${firstNamePrevious}"
-                                                               required></p>
+            <p><label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" value="${firstNamePrevious}" required></p>
 
-            <p><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName"
-                                                             value="${lastNamePrevious}" required></p>
+            <p><label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" value="${lastNamePrevious}" required></p>
 
-            <p><label for="email">Email</label><input type="email" id="email" name="email" value="${emailPrevious}"
-                                                      required></p>
+            <p><label for="email">Email</label>
+                <input type="email" id="email" name="email" value="${emailPrevious}" required></p>
 
-            <p><label for="password">Password</label><input type="password" id="password" name="password"
-                                                            value="${passwordPrevious}" required></p>
+            <p><label for="password">Password</label>
+                <input type="password" id="password" name="password" value="${passwordPrevious}" required></p>
+
+            <p><label for="arrival">Arrive:</label>
+                <input type="time" id="arrival" name="arrival" min="09:00" max="22:00"
+                       value="${arrivalPrevious} required "></p>
+
+            <p><label for="leave">Leave</label>
+                <input type="time" id="leave" name="leave" min="09:00" max="22:00" value="${leavePrevious}" required>
+            </p>
 
             <p><input type="submit" id="signUp" value="Sign Up"></p>
 
@@ -49,7 +56,7 @@
     </main>
 
 
-    <jsp:include page="footer.jsp" />
+    <jsp:include page="footer.jsp"/>
 
 </div>
 </body>

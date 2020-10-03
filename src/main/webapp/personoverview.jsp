@@ -19,6 +19,8 @@
                 <th>E-mail</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Arrival</th>
+                <th>Departure</th>
             </tr>
 
             <c:forEach var="person" items="${persons}">
@@ -26,6 +28,8 @@
                     <td>${person.email}</td>
                     <td>${person.firstName}</td>
                     <td>${person.lastName}</td>
+                    <td>${person.arrival}</td>
+                    <td>${person.leave}</td>
                 </tr>
             </c:forEach>
 

@@ -2,6 +2,7 @@ package domain.db;
 
 import domain.model.Person;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,7 +12,8 @@ public class PersonDbInMemory {
     private Map<String, Person> persons = new HashMap<>();
 
     public PersonDbInMemory () {
-        Person administrator = new Person("admin", "admin@ucll.be", "t", "Ad", "Ministrator");
+        Person administrator = new Person("admin", "admin@ucll.be", "t", "Ad", "Ministrator",
+                LocalTime.of(12,30), LocalTime.of(16,30));
         add(administrator);
     }
 
