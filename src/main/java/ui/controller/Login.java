@@ -37,8 +37,12 @@ public class Login extends RequestHandler {
                 if ((person.getArrival().isBefore(p.getArrival()) && person.getLeave().isAfter(p.getLeave())) ||
                         (person.getArrival().isAfter(p.getArrival()) && person.getLeave().isBefore(p.getLeave())) ||
                         (person.getArrival().isAfter(p.getArrival()) && person.getArrival().isBefore(p.getLeave())) ||
-                        (person.getLeave().isAfter(p.getArrival()) && person.getLeave().isBefore(p.getLeave()))){
-                    aanwezigePersonen.add(p);
+                        (person.getLeave().isAfter(p.getArrival()) && person.getLeave().isBefore(p.getLeave())) ||
+                        person.getArrival().equals(p.getArrival()) || person.getLeave().equals(p.getLeave())){
+
+                    if (!person.equals(p)){
+                        aanwezigePersonen.add(p);
+                    }
                 }
             }
 

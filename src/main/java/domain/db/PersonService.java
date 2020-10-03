@@ -12,10 +12,19 @@ public class PersonService {
 	private Map<String, Person> persons = new HashMap<>();
 	
 	public PersonService () {
-		Person administrator = new Person("admin", "admin@ucll.be", "t", "Ad",
-				"Ministrator", LocalTime.of(12,30),
-				LocalTime.of(16,30));
+		Person administrator = new Person("admin", "admin@ucll.be", "t", "Ad", "Ministrator",
+				LocalTime.of(12,30), LocalTime.of(16,30));
+		Person Frederik = new Person("frederik", "f@hot.com", "t", "frederik", "ausloos", LocalTime.of(12,00), LocalTime.of(18,00));
+		Person Lara = new Person("lara", "f@hot.com", "t", "lara", "barrezeele", LocalTime.of(11,30), LocalTime.of(15,30));
+		Person Anouk = new Person("anouk", "f@hot.com", "t", "anouk", "ausloos", LocalTime.of(18,15), LocalTime.of(20,45));
+		Person Yannick = new Person("yannick", "f@hot.com", "t", "yannick", "ausloos", LocalTime.of(15,20), LocalTime.of(22,00));
+		Person Jamie = new Person("jamie", "f@hot.com", "t", "Jamie", "Vandenbalck", LocalTime.of(9,00), LocalTime.of(13,00));
 		add(administrator);
+		add(Frederik);
+		add(Anouk);
+		add(Lara);
+		add(Jamie);
+		add(Yannick);
 	}
 	
 	public Person get(String personId){
